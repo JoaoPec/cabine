@@ -99,7 +99,7 @@ function PlanBadge({ plan }: { plan: Plan }) {
   }
   if (plan === "Pro") {
     return (
-      <span className="rounded-full border border-acid/30 bg-acid/10 px-2 py-0.5 text-[10px] font-medium text-acid">
+      <span className="rounded-full border border-brand/30 bg-brand/10 px-2 py-0.5 text-[10px] font-medium text-brand">
         {plan}
       </span>
     );
@@ -142,7 +142,7 @@ function DJCard({ dj }: { dj: DJ }) {
             </h3>
             <p className="mt-1 text-[13px] text-zinc-500">{dj.name}</p>
           </div>
-          <span className="mt-1 shrink-0 rounded-full border border-acid/30 bg-acid/10 px-3 py-1 text-[11px] font-medium text-acid">
+          <span className="mt-1 shrink-0 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-medium text-brand">
             {dj.genre}
           </span>
         </div>

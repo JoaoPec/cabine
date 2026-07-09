@@ -36,8 +36,8 @@ export function HowItWorks() {
         <div className="flex flex-col gap-4 lg:col-span-7">
           {steps.map((step, i) => (
             <Reveal key={step.verb} delay={0.08 * i}>
-              <div className="group rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-8 transition-colors duration-500 hover:border-acid/30 md:p-10">
-                <h3 className="font-display text-2xl font-semibold text-white transition-colors duration-500 group-hover:text-acid">
+              <div className="group rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-8 transition-colors duration-500 hover:border-brand/30 md:p-10">
+                <h3 className="font-display text-2xl font-semibold text-white transition-colors duration-500 group-hover:text-brand">
                   {step.verb}
                 </h3>
                 <p className="mt-3 max-w-md leading-relaxed text-zinc-400">

@@ -33,7 +33,7 @@ Plataforma de booking de DJs similar ao Fatal Model. DJs criam perfil por verten
 @theme inline {
   --color-ink: #0b0b0c;          /* fundo principal */
   --color-panel: #131315;        /* cards / seções alternadas */
-  --color-acid: #c8f169;         /* accent verde — CTAs, badges, destaques */
+  --color-brand: #a78bfa;        /* accent roxo — CTAs, badges, destaques */
   --font-display: var(--font-unbounded);
   --font-body: var(--font-grotesk);
 }
@@ -43,8 +43,8 @@ Plataforma de booking de DJs similar ao Fatal Model. DJs criam perfil por verten
 - Texto: `text-zinc-100` (body), `text-white` (headings)
 - Corpo: `text-zinc-400`
 - Bordas: `border-white/10` ou `border-white/5`
-- CTA principal: `bg-acid text-ink`
-- Seleção de texto: `bg-acid text-ink`
+- CTA principal: `bg-brand text-ink`
+- Seleção de texto: `bg-brand text-ink`
 - Scrollbar: fina, cor `rgba(255,255,255,0.12)`
 
 ---

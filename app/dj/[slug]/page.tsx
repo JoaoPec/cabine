@@ -200,7 +200,7 @@ function PlanBadge({ plan }: { plan: PlanName }) {
   }
   if (plan === "Pro") {
     return (
-      <span className="rounded-full border border-acid/30 bg-acid/10 px-3 py-1 text-[11px] font-medium text-acid">
+      <span className="rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-medium text-brand">
         {plan}
       </span>
     );
@@ -223,7 +223,7 @@ export default async function DJProfilePage({
         <section className="flex min-h-[60vh] items-center justify-center pt-32">
           <div className="text-center">
             <h1 className="font-display text-4xl font-bold text-white">DJ não encontrado</h1>
-            <Link href="/#djs" className="mt-6 inline-block rounded-full bg-acid px-6 py-3 text-sm font-semibold text-ink">
+            <Link href="/#djs" className="mt-6 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-ink">
               Ver todos os DJs
             </Link>
           </div>
@@ -281,7 +281,7 @@ export default async function DJProfilePage({
                   </h1>
                   <p className="mt-2 text-zinc-500">{dj.name}</p>
                 </div>
-                <span className="rounded-full border border-acid/30 bg-acid/10 px-4 py-1.5 text-[13px] font-medium text-acid">
+                <span className="rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-[13px] font-medium text-brand">
                   {dj.genre}
                 </span>
               </div>
@@ -307,9 +307,9 @@ export default async function DJProfilePage({
               {isFree && (
                 <div className="mt-6 rounded-[1.25rem] border border-white/10 bg-white/[0.02] p-6">
                   <p className="text-sm text-zinc-400">
-                    <span className="font-semibold text-acid">{dj.artist}</span> está no plano{" "}
+                    <span className="font-semibold text-brand">{dj.artist}</span> está no plano{" "}
                     <span className="text-white">Gratuito</span>.{" "}
-                    <Link href="/planos" className="underline underline-offset-4 hover:text-acid">
+                    <Link href="/planos" className="underline underline-offset-4 hover:text-brand">
                       Faça upgrade pro plano Pro
                     </Link>{" "}
                     para ver cachê, agenda, fotos e formulário de orçamento.
@@ -390,7 +390,7 @@ export default async function DJProfilePage({
                     {dj.availableDates.map((date) => (
                       <span
                         key={date}
-                        className="rounded-full border border-acid/20 bg-acid/5 px-3 py-1.5 text-[13px] text-acid"
+                        className="rounded-full border border-brand/20 bg-brand/5 px-3 py-1.5 text-[13px] text-brand"
                       >
                         {date}
                       </span>
@@ -437,7 +437,7 @@ export default async function DJProfilePage({
                         </label>
                         <input
                           type="text"
-                          className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-acid/40 focus:outline-none"
+                          className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-brand/40 focus:outline-none"
                           placeholder="Seu nome"
                         />
                       </div>
@@ -447,7 +447,7 @@ export default async function DJProfilePage({
                         </label>
                         <input
                           type="email"
-                          className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-acid/40 focus:outline-none"
+                          className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-brand/40 focus:outline-none"
                           placeholder="seu@email.com"
                         />
                       </div>
@@ -459,14 +459,14 @@ export default async function DJProfilePage({
                         </label>
                         <input
                           type="date"
-                          className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white focus:border-acid/40 focus:outline-none"
+                          className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white focus:border-brand/40 focus:outline-none"
                         />
                       </div>
                       <div>
                         <label className="mb-1.5 block text-[13px] font-medium text-zinc-400">
                           Tipo de evento
                         </label>
-                        <select className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white focus:border-acid/40 focus:outline-none">
+                        <select className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white focus:border-brand/40 focus:outline-none">
                           <option value="">Selecione</option>
                           <option>Festa</option>
                           <option>Festival</option>
@@ -482,13 +482,13 @@ export default async function DJProfilePage({
                       </label>
                       <textarea
                         rows={3}
-                        className="w-full rounded-[1rem] border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-acid/40 focus:outline-none"
+                        className="w-full rounded-[1rem] border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-brand/40 focus:outline-none"
                         placeholder="Conte um pouco sobre o evento..."
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full rounded-full bg-acid py-3 text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.01] active:scale-[0.98]"
+                      className="w-full rounded-full bg-brand py-3 text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.01] active:scale-[0.98]"
                     >
                       Enviar proposta
                     </button>

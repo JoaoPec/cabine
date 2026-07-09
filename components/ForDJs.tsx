@@ -31,8 +31,8 @@ const plans = [
       "Selo de perfil destacado nas buscas",
     ],
     cta: "Assinar Pro",
-    accent: "border-acid/40",
-    bg: "bg-acid/5",
+    accent: "border-brand/40",
+    bg: "bg-brand/5",
     featured: true,
   },
   {
@@ -63,7 +63,7 @@ export function ForDJs() {
           <div className="text-center">
             <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
               Planos que cabem no seu{" "}
-              <span className="text-acid">bolso</span>.
+              <span className="text-brand">bolso</span>.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-zinc-400">
               Do gratuito ao premium. Escolha o plano certo pro seu momento e
@@ -78,12 +78,12 @@ export function ForDJs() {
               <div
                 className={`relative flex h-full flex-col rounded-[1.5rem] border ${plan.accent} ${plan.bg} p-6 md:p-8 ${
                   plan.featured
-                    ? "ring-1 ring-acid/20 md:scale-[1.04]"
+                    ? "ring-1 ring-brand/20 md:scale-[1.04]"
                     : ""
                 }`}
               >
                 {plan.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-acid px-4 py-1 text-[11px] font-semibold text-ink">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand px-4 py-1 text-[11px] font-semibold text-ink">
                     Mais popular
                   </span>
                 )}
@@ -122,7 +122,7 @@ export function ForDJs() {
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className={plan.featured ? "text-acid" : "text-zinc-500"}
+                          className={plan.featured ? "text-brand" : "text-zinc-500"}
                         />
                       </svg>
                       <span>{feat}</span>
@@ -134,7 +134,7 @@ export function ForDJs() {
                   href="#contato"
                   className={`mt-8 flex w-full items-center justify-center rounded-full border py-3 text-sm font-semibold transition-all duration-300 ${
                     plan.featured
-                      ? "border-transparent bg-acid text-ink hover:bg-acid/90 active:scale-[0.98]"
+                      ? "border-transparent bg-brand text-ink hover:bg-brand/90 active:scale-[0.98]"
                       : "border-white/15 text-white hover:border-white/40 active:scale-[0.98]"
                   }`}
                 >

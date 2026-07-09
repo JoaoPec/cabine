@@ -41,7 +41,7 @@ export function Nav() {
           <div className="flex items-center gap-2">
             <Link
               href="/planos"
-              className="hidden rounded-full bg-acid px-4 py-2 text-[13px] font-semibold text-ink transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.03] active:scale-[0.97] md:block"
+              className="hidden rounded-full bg-brand px-4 py-2 text-[13px] font-semibold text-ink transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.03] active:scale-[0.97] md:block"
             >
               Sou DJ
             </Link>
@@ -104,7 +104,7 @@ export function Nav() {
                   delay: 0.08 * links.length,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-4 w-max rounded-full bg-acid px-6 py-3 font-semibold text-ink"
+                className="mt-4 w-max rounded-full bg-brand px-6 py-3 font-semibold text-ink"
               >
                 Sou DJ
               </motion.a>

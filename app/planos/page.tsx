@@ -49,10 +49,10 @@ const cards = [
     period: "/mês",
     description:
       "Perfil completo pra quem toca com frequência. Fotos, agenda, redes e formulário de orçamento.",
-    accent: "border-acid/40 ring-1 ring-acid/20 md:scale-[1.04]",
-    bg: "bg-acid/5",
+    accent: "border-brand/40 ring-1 ring-brand/20 md:scale-[1.04]",
+    bg: "bg-brand/5",
     cta: "Assinar Pro",
-    ctaClass: "bg-acid text-ink hover:bg-acid/90",
+    ctaClass: "bg-brand text-ink hover:bg-brand/90",
     featured: true,
   },
   {
@@ -104,18 +104,18 @@ export default function PlanosPage() {
       <section className="relative overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-40 right-[-20%] h-[560px] w-[560px] rounded-full bg-acid/[0.07] blur-3xl"
+          className="pointer-events-none absolute -top-40 right-[-20%] h-[560px] w-[560px] rounded-full bg-brand/[0.07] blur-3xl"
         />
         <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
           <Reveal>
-            <span className="inline-block rounded-full border border-acid/30 bg-acid/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-acid">
+            <span className="inline-block rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-brand">
               Planos
             </span>
           </Reveal>
           <Reveal delay={0.08}>
             <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl">
               Escolha o plano certo pro seu{" "}
-              <span className="text-acid">momento</span>.
+              <span className="text-brand">momento</span>.
             </h1>
           </Reveal>
           <Reveal delay={0.16}>
@@ -136,7 +136,7 @@ export default function PlanosPage() {
                 className={`relative flex h-full flex-col rounded-[1.5rem] border ${plan.accent} ${plan.bg} p-6 md:p-8`}
               >
                 {plan.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-acid px-4 py-1 text-[11px] font-semibold text-ink">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand px-4 py-1 text-[11px] font-semibold text-ink">
                     Mais popular
                   </span>
                 )}
@@ -191,7 +191,7 @@ export default function PlanosPage() {
                   <th className="pb-4 px-4 text-center font-display text-base font-semibold text-zinc-400">
                     Gratuito
                   </th>
-                  <th className="pb-4 px-4 text-center font-display text-base font-semibold text-acid">
+                  <th className="pb-4 px-4 text-center font-display text-base font-semibold text-brand">
                     Pro
                   </th>
                   <th className="pb-4 pl-4 text-center font-display text-base font-semibold text-amber-400">
@@ -258,12 +258,12 @@ export default function PlanosPage() {
       <section className="relative overflow-hidden py-24 lg:py-32">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[480px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-acid/[0.06] blur-3xl"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[480px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/[0.06] blur-3xl"
         />
         <div className="relative mx-auto max-w-2xl px-4 text-center md:px-8">
           <Reveal>
             <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
-              Comece de <span className="text-acid">graça</span>.
+              Comece de <span className="text-brand">graça</span>.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -276,7 +276,7 @@ export default function PlanosPage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="#contato"
-                className="group flex items-center gap-3 rounded-full bg-acid py-2 pl-6 pr-2 font-semibold text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.98]"
+                className="group flex items-center gap-3 rounded-full bg-brand py-2 pl-6 pr-2 font-semibold text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.98]"
               >
                 Criar perfil grátis
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/10 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
@@ -325,7 +325,7 @@ function Check({
       height="18"
       viewBox="0 0 16 16"
       fill="none"
-      className={`mx-auto ${amber ? "text-amber-400" : highlight ? "text-acid" : "text-zinc-500"}`}
+      className={`mx-auto ${amber ? "text-amber-400" : highlight ? "text-brand" : "text-zinc-500"}`}
     >
       <path
         d="M3 8.5l3 3 7-7"

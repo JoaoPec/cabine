@@ -7,13 +7,13 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 right-[-20%] h-[560px] w-[560px] rounded-full bg-acid/[0.07] blur-3xl"
+        className="pointer-events-none absolute -top-40 right-[-20%] h-[560px] w-[560px] rounded-full bg-brand/[0.07] blur-3xl"
       />
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 pb-20 pt-32 md:px-8 lg:grid-cols-12 lg:pb-28 lg:pt-40">
         <div className="lg:col-span-7">
           <Reveal>
-            <span className="inline-block rounded-full border border-acid/30 bg-acid/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-acid">
+            <span className="inline-block rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-brand">
               Booking de DJs
             </span>
           </Reveal>
@@ -35,7 +35,7 @@ export function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 href="/#djs"
-                className="group flex items-center gap-3 rounded-full bg-acid py-2 pl-6 pr-2 font-semibold text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.98]"
+                className="group flex items-center gap-3 rounded-full bg-brand py-2 pl-6 pr-2 font-semibold text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.98]"
               >
                 Encontrar DJ
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/10 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:scale-105">

@@ -3,13 +3,13 @@
 @theme inline {
   --color-ink: #0b0b0c;
   --color-panel: #131315;
-  --color-acid: #c8f169;
+  --color-brand: #a78bfa;
   --font-display: var(--font-unbounded), system-ui, sans-serif;
   --font-body: var(--font-grotesk), system-ui, sans-serif;
 }
 
 ::selection {
-  background: #c8f169;
+  background: #a78bfa;
   color: #0b0b0c;
 }
 
