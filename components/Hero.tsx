@@ -1,10 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Glow de fundo: um único orb acid, discreto */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 right-[-20%] h-[560px] w-[560px] rounded-full bg-acid/[0.07] blur-3xl"
@@ -33,8 +33,8 @@ export function Hero() {
 
           <Reveal delay={0.24}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="#djs"
+              <Link
+                href="/#djs"
                 className="group flex items-center gap-3 rounded-full bg-acid py-2 pl-6 pr-2 font-semibold text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.98]"
               >
                 Encontrar DJ
@@ -55,26 +55,25 @@ export function Hero() {
                     />
                   </svg>
                 </span>
-              </a>
+              </Link>
 
-              <a
-                href="#para-djs"
+              <Link
+                href="/planos"
                 className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition-colors duration-300 hover:border-white/40 active:scale-[0.98]"
               >
                 Sou DJ
-              </a>
+              </Link>
             </div>
           </Reveal>
         </div>
 
-        {/* Cascata de imagens no eixo Z */}
         <div className="relative hidden lg:col-span-5 lg:block">
           <Reveal delay={0.2}>
             <div className="relative h-[520px]">
               <div className="absolute left-0 top-8 w-[300px] -rotate-2 rounded-[1.5rem] border border-white/10 bg-white/5 p-1.5">
                 <Image
-                  src="https://picsum.photos/seed/cabine-club-lights/600/760"
-                  alt="Luzes de pista em festa de música eletrônica"
+                  src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&h=760&q=80"
+                  alt="Show de música eletrônica com luzes sobre o público"
                   width={600}
                   height={760}
                   priority
@@ -83,8 +82,8 @@ export function Hero() {
               </div>
               <div className="absolute right-0 top-24 w-[260px] rotate-3 rounded-[1.5rem] border border-white/10 bg-white/5 p-1.5">
                 <Image
-                  src="https://picsum.photos/seed/cabine-dj-booth/520/640"
-                  alt="Cabine do DJ durante apresentação"
+                  src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=520&h=640&q=80"
+                  alt="Mãos do DJ no mixer com iluminação neon"
                   width={520}
                   height={640}
                   priority

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
 export function FinalCTA() {
@@ -24,8 +25,8 @@ export function FinalCTA() {
 
         <Reveal delay={0.2}>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#djs"
+            <Link
+              href="/#djs"
               className="group flex items-center gap-3 rounded-full bg-acid py-2 pl-6 pr-2 font-semibold text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] active:scale-[0.98]"
             >
               Encontrar DJ
@@ -46,14 +47,14 @@ export function FinalCTA() {
                   />
                 </svg>
               </span>
-            </a>
+            </Link>
 
-            <a
-              href="#para-djs"
+            <Link
+              href="/planos"
               className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition-colors duration-300 hover:border-white/40 active:scale-[0.98]"
             >
               Sou DJ
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
+import Link from "next/link";
 
 const links = [
-  { label: "DJs", href: "#djs" },
-  { label: "Vertentes", href: "#vertentes" },
-  { label: "Como funciona", href: "#como-funciona" },
-  { label: "Para DJs", href: "#para-djs" },
+  { label: "DJs", href: "/#djs" },
+  { label: "Vertentes", href: "/#vertentes" },
+  { label: "Como funciona", href: "/#como-funciona" },
+  { label: "Planos", href: "/planos" },
 ];
 
 export function Nav() {
@@ -18,32 +19,32 @@ export function Nav() {
     <>
       <header className="fixed inset-x-0 top-0 z-40 flex justify-center px-4 pt-5">
         <nav className="flex w-full max-w-3xl items-center justify-between rounded-full border border-white/10 bg-ink/70 py-2 pl-5 pr-2 backdrop-blur-xl">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="font-display text-sm font-bold tracking-tight text-white"
           >
             CABINE
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-6 md:flex">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-[13px] text-zinc-400 transition-colors duration-300 hover:text-white"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="flex items-center gap-2">
-            <a
-              href="#djs"
+            <Link
+              href="/planos"
               className="hidden rounded-full bg-acid px-4 py-2 text-[13px] font-semibold text-ink transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.03] active:scale-[0.97] md:block"
             >
-              Encontrar DJ
-            </a>
+              Sou DJ
+            </Link>
 
             <button
               type="button"
@@ -94,7 +95,7 @@ export function Nav() {
                 </motion.a>
               ))}
               <motion.a
-                href="#djs"
+                href="/planos"
                 onClick={() => setOpen(false)}
                 initial={reduce ? false : { opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -105,7 +106,7 @@ export function Nav() {
                 }}
                 className="mt-4 w-max rounded-full bg-acid px-6 py-3 font-semibold text-ink"
               >
-                Encontrar DJ
+                Sou DJ
               </motion.a>
             </div>
           </motion.div>

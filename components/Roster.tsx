@@ -1,83 +1,133 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
+
+type Plan = "Gratuito" | "Pro" | "Premium";
 
 type DJ = {
   artist: string;
+  slug: string;
   name: string;
   genre: string;
   city: string;
   fee: string;
-  seed: string;
+  photo: string;
+  plan: Plan;
   featured?: boolean;
 };
 
 const djs: DJ[] = [
   {
     artist: "KAORA",
+    slug: "kaora",
     name: "Marina Yamauchi",
     genre: "Psytrance",
     city: "Alto Paraíso, GO",
     fee: "R$ 2.400",
-    seed: "cabine-kaora-forest-stage",
+    photo: "photo-1533174072545-7a4b6ad7a6c3",
+    plan: "Premium",
     featured: true,
   },
   {
     artist: "VĒLA",
+    slug: "vela",
     name: "Bárbara Antunes",
     genre: "Melodic Techno",
     city: "São Paulo, SP",
     fee: "R$ 1.800",
-    seed: "cabine-vela-melodic",
+    photo: "photo-1493673272479-a20888bcee10",
+    plan: "Pro",
   },
   {
     artist: "RÜDIGER",
+    slug: "rudiger",
     name: "Rodrigo Kruger",
     genre: "Hard Techno",
     city: "Curitiba, PR",
     fee: "R$ 2.100",
-    seed: "cabine-rudiger-industrial",
+    photo: "photo-1574391884720-bbc3740c59d1",
+    plan: "Premium",
   },
   {
     artist: "MALTA",
+    slug: "malta",
     name: "Caio Malta",
     genre: "Tech House",
     city: "Florianópolis, SC",
     fee: "R$ 1.600",
-    seed: "cabine-malta-beach",
+    photo: "photo-1429962714451-bb934ecdc4ec",
+    plan: "Pro",
   },
   {
     artist: "DANDARA",
+    slug: "dandara",
     name: "Dandara Reis",
     genre: "House",
     city: "Salvador, BA",
     fee: "R$ 1.500",
-    seed: "cabine-dandara-sunset",
+    photo: "photo-1501281668745-f7f57925c3b4",
+    plan: "Gratuito",
   },
   {
     artist: "SUBSOLO",
+    slug: "subsolo",
     name: "Ian Prado",
     genre: "Drum & Bass",
     city: "Belo Horizonte, MG",
     fee: "R$ 1.900",
-    seed: "cabine-subsolo-bass",
+    photo: "photo-1501386761578-eac5c94b800a",
+    plan: "Gratuito",
   },
 ];
 
+function PlanBadge({ plan }: { plan: Plan }) {
+  if (plan === "Premium") {
+    return (
+      <span className="flex items-center gap-1 rounded-full border border-amber-400/30 bg-amber-400/10 px-2 py-0.5 text-[10px] font-medium text-amber-400">
+        <svg width="10" height="10" viewBox="0 0 16 16" fill="none">
+          <path
+            d="M5 8.5l2 2 4-5"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        {plan}
+      </span>
+    );
+  }
+  if (plan === "Pro") {
+    return (
+      <span className="rounded-full border border-acid/30 bg-acid/10 px-2 py-0.5 text-[10px] font-medium text-acid">
+        {plan}
+      </span>
+    );
+  }
+  return null;
+}
+
 function DJCard({ dj }: { dj: DJ }) {
   return (
-    <a
-      href="#contato"
+    <Link
+      href={`/dj/${dj.slug}`}
       className="group relative block h-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-panel"
     >
       <div className={`relative ${dj.featured ? "h-72 md:h-[420px]" : "h-56"}`}>
         <Image
-          src={`https://picsum.photos/seed/${dj.seed}/800/640`}
+          src={`https://images.unsplash.com/${dj.photo}?auto=format&fit=crop&w=800&h=640&q=80`}
           alt={`${dj.artist}, DJ de ${dj.genre}`}
           width={800}
           height={640}
           className="h-full w-full object-cover opacity-70 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.04] group-hover:opacity-90"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-panel via-transparent to-transparent" />
+
+        {dj.plan !== "Gratuito" && (
+          <div className="absolute right-3 top-3">
+            <PlanBadge plan={dj.plan} />
+          </div>
+        )}
       </div>
 
       <div className="p-5 md:p-6">
@@ -105,7 +155,7 @@ function DJCard({ dj }: { dj: DJ }) {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -129,7 +179,11 @@ export function Roster() {
 
         <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
           {djs.map((dj, i) => (
-            <Reveal key={dj.artist} delay={0.05 * i} className={dj.featured ? "md:col-span-2 md:row-span-2" : ""}>
+            <Reveal
+              key={dj.artist}
+              delay={0.05 * i}
+              className={dj.featured ? "md:col-span-2 md:row-span-2" : ""}
+            >
               <DJCard dj={dj} />
             </Reveal>
           ))}

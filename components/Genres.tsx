@@ -2,14 +2,14 @@ import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const genres = [
-  { name: "Psytrance", djs: 34, seed: "cabine-psytrance-forest" },
-  { name: "Techno", djs: 41, seed: "cabine-techno-warehouse" },
-  { name: "Tech House", djs: 28, seed: "cabine-techhouse-groove" },
-  { name: "House", djs: 23, seed: "cabine-house-classic" },
-  { name: "Hard Techno", djs: 17, seed: "cabine-hardtechno-industrial" },
-  { name: "Drum & Bass", djs: 14, seed: "cabine-dnb-bass" },
-  { name: "Trance", djs: 19, seed: "cabine-trance-uplift" },
-  { name: "Progressive", djs: 21, seed: "cabine-progressive-melodic" },
+  { name: "Psytrance", djs: 34, photo: "photo-1533174072545-7a4b6ad7a6c3" },
+  { name: "Techno", djs: 41, photo: "photo-1493673272479-a20888bcee10" },
+  { name: "Tech House", djs: 28, photo: "photo-1429962714451-bb934ecdc4ec" },
+  { name: "House", djs: 23, photo: "photo-1501281668745-f7f57925c3b4" },
+  { name: "Hard Techno", djs: 17, photo: "photo-1563841930606-67e2bce48b78" },
+  { name: "Drum & Bass", djs: 14, photo: "photo-1501386761578-eac5c94b800a" },
+  { name: "Trance", djs: 19, photo: "photo-1516450360452-9312f5e86fc7" },
+  { name: "Progressive", djs: 21, photo: "photo-1470225620780-dba8ba36b745" },
 ];
 
 export function Genres() {
@@ -36,7 +36,7 @@ export function Genres() {
               className="group relative h-72 w-56 shrink-0 snap-start overflow-hidden rounded-[1.5rem] border border-white/10"
             >
               <Image
-                src={`https://picsum.photos/seed/${genre.seed}/448/576`}
+                src={`https://images.unsplash.com/${genre.photo}?auto=format&fit=crop&w=448&h=576&q=80`}
                 alt={`Vertente ${genre.name}`}
                 width={448}
                 height={576}
